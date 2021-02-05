@@ -1,0 +1,26 @@
+.barra-superior {
+	position: relative;
+	color: #FFFB39;
+	background-color: black;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 30px;
+	border-bottom: 5px yellow solid;
+	z-index: 1;
+}
+
+.barra-superior #cabeçalho {
+	display: flex;
+	font-size: 2.3em;
+}
+
+.barra-superior .imagem img {
+	position: absolute;
+	top: 20px;
+	width: 50px;
+	right: 30px;
+	transition: transform 300ms, right 300ms;
+	cursor: pointer;
+}

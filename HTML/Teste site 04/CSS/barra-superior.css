@@ -1,0 +1,19 @@
+.barra-superior {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	position: -webkit-sticky; /* Safari */
+	top: 0;
+	background: #fff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.barra-superior input {
+	padding: 0 10px;
+	margin-left: 20px;
+}
+
+.login {
+	right: 30px;
+	position: absolute;
+}

@@ -1,0 +1,23 @@
+.relatados {
+	margin: 50px 0;
+}
+
+.relatados h2 {
+	font-size: 3em;
+}
+
+.relatados ul {
+	margin: 25px 80px;
+	font-size: 2em;
+	list-style: square;
+	line-height: 1.5em;
+}
+
+.relatados a {
+	color: #424CAD;
+	text-decoration: none;
+}
+
+.relatados a:hover {
+	text-decoration: underline;
+}

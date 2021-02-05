@@ -1,0 +1,11 @@
+#imagem_1 {
+	display: block;
+	width: 80%;
+	margin: 30px auto 50px auto;
+}
+
+#imagem_02 {
+	display: block;
+	margin: auto;
+	width: 70%;
+}

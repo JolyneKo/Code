@@ -1,0 +1,19 @@
+#botãoHelp {
+	width: 130px;
+	color: yellow;
+	position: fixed;
+	bottom: 0;
+	background-color: #000000;
+	font-size: 1.3em;
+	padding: 10px;
+	text-decoration: none;
+	transition: opacity 300ms, width 100ms, height 100ms;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0;
+}
+
+#botãoHelp:active {
+	background-color: yellow;
+	color: black;
+}

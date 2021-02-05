@@ -1,0 +1,25 @@
+O que é HTML?
+
+O que é HTML
+
+Criada pelo britânico Tim Berners-Lee, HTML significa HiperText Markup Language, linguagem
+de Marcação de Hipertexto, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website.
+Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (JavaScript) de uma página da web. 
+O HTML usa "Marcação" para anotar texto, imagem e outros conteúdos para exibição em um navegador da Web.
+Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome
+do elemento entre "<" e ">". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. 
+Por exemplo, a tag <title> pode ser escrita como <Title>, <TITLE> ou de qualquer outra forma.
+
+O que é Hipertexto?
+
+"Hipertexto" refere-se aos links que conectam páginas da Web entre si, 
+seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web.
+
+O que é CSS?
+
+CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML. O CSS descreve como elementos são mostrados na tela.
+
+O que é JavaScript?
+
+JavaScript® (às vezes abreviado para JS) é uma linguagem de script, interpretada e baseada em objetos, usada para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js,  Apache CouchDB e Adobe Acrobat.
+Não se deve confundir o JavaScript com a linguagem de programação Java. Tanto Java quanto JavaScript são marcas registradas da Oracle nos Estados Unidos da América e em outros países. No entanto, as duas linguagens de programação possuem sintaxe, semânticas e usos muito diferentes.

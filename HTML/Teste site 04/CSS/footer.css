@@ -1,0 +1,28 @@
+.footer {
+	background: #000;
+	padding: 20px;
+	font-size: 1.5em;
+	color: #C1C1C1;
+	display: flex;
+}
+
+.footer li {
+	list-style: none;
+	color: #868686;
+}
+
+#produtos, #company, #learnMore, #redeSociais, #logo {
+	padding: 0 40px;
+}
+
+#redeSociais {
+	line-height: 2em
+}
+
+#logo {
+	padding: 65px 40px 0 15%;
+	font-size: 2em;
+	border-left: solid 2px grey;
+	font-weight: bold;
+	text-decoration: underline;
+}

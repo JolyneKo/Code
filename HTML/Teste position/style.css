@@ -1,0 +1,44 @@
+.box, .box_2 {
+	width: 300px;
+	height: 300px;
+	border: 5px solid black;
+	margin: auto 50%;
+	transform: translateX(-50%);
+	background: yellow;
+}
+
+.box_2 {
+	margin-top: 20px;
+}
+
+.minibox_1, .minibox_2, .minibox_3 {
+	width: 100px;
+	height: 100px;
+}
+
+.minibox_1 {
+	background: red;
+}
+
+.minibox_2 {
+	background: green;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+
+.minibox_3 {
+	width: 200px;
+	background: blue;
+	position: absolute;
+}
+
+.sidebox {
+	border: 1px solid black;
+	background: yellow;
+	width: 200px;
+	height: 45%;
+	padding: 30px;
+	position: absolute;
+	top: 10px;
+}

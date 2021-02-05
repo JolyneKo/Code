@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		background-color: #f4f4f4;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.barra-superior {
+		width: 100%;
+		height: 90px;
+		background-color: yellow;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5em;
+	}
+
+	.navegação {
+		background-color: black;
+		overflow: hidden;
+		width: 100%;
+		height: 40px;
+		display: grid;
+		display: flex;
+		justify-content: center;
+	}
+
+	.navegação button {
+		color: white;
+		font-size: 1.4em;
+		width: 150px;
+		height: 40px;
+		border: none;
+		background-color: black;
+	}
+
+	.navegação button:hover {
+		background-color: red;
+		color: black;
+	}
+
+	.lista {
+		position: absolute;
+		color: black;
+		background-color: yellow;
+		width: 150px;
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		background-color: #f4f4f4;
+		font-family: Arial, Helvetica, sans-serif;
+		overflow: hidden;
+	}
+
+	.barra-superior {
+		width: 100%;
+		height: 50px;
+		background-color: yellow;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: .9em;
+	}
+
+	.navegação {
+		background-color: black;
+		overflow: hidden;
+		width: 100%;
+		height: 40px;
+		display: grid;
+		display: flex;
+		justify-content: center;
+	}
+
+	.navegação button {
+		color: white;
+		font-size: .8em;
+		width: 150px;
+		height: 40px;
+		border: none;
+		background-color: black;
+		padding: 5px;
+	}
+
+	.navegação button:hover {
+		background-color: red;
+		color: black;
+	}
+
+	.lista {
+		position: absolute;
+		color: black;
+		background-color: yellow;
+		width: 14.3vw;
+		height: 300px;
+		overflow: hidden;
+	}
+}

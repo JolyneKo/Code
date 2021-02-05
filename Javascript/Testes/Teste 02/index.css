@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+.player {
+    background-color: tomato;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 43vh;
+    left: 47vw;
+}

@@ -1,0 +1,38 @@
+.barra-lateral {
+	visibility: hidden;
+	color: yellow;
+	width: 0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: black;
+	border-left: 5px yellow solid;
+	transition: visibility 300ms, width 300ms;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+.barra-lateral #titulo-lateral {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+	font-size: 2em;
+	border-bottom: 3px;
+}
+
+.barra-lateral .lista {
+	padding: 0 30px;
+	list-style: none;
+}
+
+.barra-lateral .lista a {
+	color: yellow;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.barra-lateral .lista a:hover {
+	color: red;
+}

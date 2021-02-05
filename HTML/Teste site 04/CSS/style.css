@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-block {
+	margin: 50px 20%;
+	background: #fff;
+	padding: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cabeçalho {
+	color: #FF9300;
+	font-size: 3em;
+	font-weight: 550;
+	margin: 0;
+}
+
+.sub-cabeçalho {
+	font-size: 2.5em;
+	color: #FF9F00;
+}
+
+.texto {
+	font-size: 1.6em;
+	line-height: 1.4em;
+}
+
+.textinho {
+	color: #9B9B9B;
+	font-size: 1.4em;
+	margin-left: 5px;
+}
+
+.regua {
+	width: 30%;
+	margin-left: 0;
+	border: 1px solid #ccc;
+}
+
+.my-list li {
+	font-size: 1.5em;
+	line-height: 1.7em;
+}
+
+a {
+	color: #FF7900;
+}
+
+a:hover {
+	color: #000;
+}
+
+a:active {
+	color: red;
+}
+
+.clr {
+	clear;
+}
+
+.bloquinhos a {
+	background: #000;
+	padding: 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.bloquinhos a:hover {
+	background: red;
+	color: #fff;
+}
+
+.bloquinhos a:active {
+	background: green;
+}
+
+.help a {
+	position: fixed;
+	bottom: 0;
+}

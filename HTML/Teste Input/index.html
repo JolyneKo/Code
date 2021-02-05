@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML FORMS</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>HTML Forms</h1>
+      <div class="forms">
+        <form>
+          <label for="username">Enter username:</label>
+          <br />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="username"
+          />
+          <br /><br />
+
+          <label for="email">Enter email:</label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+          />
+          <br /><br />
+
+          <label for="password">Enter password:</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="password"
+          />
+          <br /><br />
+
+          <p>Select your age:</p>
+          <input type="radio" name="age" id="option-1" value="0-18" />
+          <label for="option-1">0-18</label>
+          <input type="radio" name="age" id="option-2" value="19-30" />
+          <label for="option-2">19-30</label>
+          <input type="radio" name="age" id="option-3" value="31-50" />
+          <label for="option-3">31-50</label>
+          <input type="radio" name="age" id="option-4" value="+50" />
+          <label for="option-4">+50</label>
+
+          <br /><br />
+
+          <label for="question">What's your favourite color?</label>
+          <br />
+          <select name="question" id="question">
+            <option value="q1">Blue</option>
+            <option value="q2">Red</option>
+            <option value="q3">Black</option>
+            <option value="q4">Other</option>
+          </select>
+          <br /><br />
+
+          <label for="answer">Other:</label>
+          <input type="text" name="answer" id="answer" />
+          <br /><br />
+
+          <label for="bio">Bio:</label>
+          <br />
+          <textarea
+            name="bio"
+            id="bio"
+            cols="30"
+            rows="10"
+            placeholder="Your bio here..."
+          ></textarea>
+
+          <br /><br />
+
+          <input type="submit" value="submit your form" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
