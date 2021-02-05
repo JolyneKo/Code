@@ -1,0 +1,22 @@
+{
+  "name": "botjolynex",
+  "version": "1.0.0",
+  "description": "Bot Discord criado pela JolyneKo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JolyneKo/Code.git"
+  },
+  "author": "JolyneKo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JolyneKo/Code/issues"
+  },
+  "homepage": "https://github.com/JolyneKo/Code#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
