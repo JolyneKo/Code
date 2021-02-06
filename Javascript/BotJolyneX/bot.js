@@ -71,7 +71,15 @@ client.on('message', message => {
                 message.channel.send(time);
                 break;
             case 'say':
-                message.channel.send(args.join());
+                try {
+                    const [canal, ...mensagem] =  args.filter((text) => text !== '');
+                    const canalID = canal.substring(2, canal.length - 1);
+                    const userChannel = client.channels.cache.get(canalID);
+                    userChannel.send(mensagem.join(' '));
+                } catch (error) {
+                    const mensagem = message.content.substring(4);
+                    message.channel.send(mensagem);
+                }
                 break;
         }
     }
