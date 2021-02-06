@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const Comandos = require('./comandos.js');
+const ytdl = require('ytdl-core');
 const { token, prefix } = require('./infos.json');
 
 const client = new Discord.Client();
@@ -44,7 +45,9 @@ client.on('message', message => {
                         {name: '$multiplicação', value: 'Multiplica os números dados'},
                         {name: '$divisão', value: 'Divide os números dados, exceto zero'},
                         {name: '$factorial', value: 'Tira a factorial de um número'},
-                        {name: '$papagaio', value: 'Papagaio que repete todas as suas palavras'},
+                        {name: '$google', value: 'Pesquisa no google'},
+                        {name: '$youtube', value: 'Pesquisa no Youtube'},
+                        {name: '$pornhub', value: 'Pesquisa no Porhub'},
                         {name: '$dm', value: 'Enviar mensagem na dm de alguém'},
                         {name: '$papeltesoura', value: 'Joga papel tesoura com você'},
                         {name: '$convite', value: 'Link de convite do bot'}
@@ -180,6 +183,18 @@ client.on('message', message => {
                     .setDescription(ytURL);
                 message.channel.send(ytEmbed);
                 break;
+            case 'pornhub':
+                const phPesquisa = args.join('+');
+                const phURL = `[${args.join('')}](https://www.pornhub.com/gay/video/search?search=${phPesquisa})`;
+                const phEmbed = new Discord.MessageEmbed()
+                    .setColor('#ff0000')
+                    .setDescription(phURL);
+                message.channel.send(phEmbed);
+                break;
+            case 'convite':
+                message.channel.send('https://discord.com/api/oauth2/authorize?client_id=807340480509640734&permissions=8&scope=bot');
+                break;
+
         }
     }
 });

@@ -1,3 +1,6 @@
+const ytdl = require('ytdl-core');
+const fs = require('fs');
+
 class Comandos {
     static soma(...nums) {
         return nums.reduce((total, num) => total + num);
