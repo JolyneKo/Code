@@ -125,3 +125,17 @@ const [a, b,, ...resto] = [1, 2, 3, 4, 5, 6];
 
 // Ele pega o primeiro elemento, guarda na variável a, segundo elemento na variável b, ignora o terceiro elemento, e os elementos restantes são guardados no array resto
 // Rest operator é usado para pegar os elementos restantes
+
+// Import e Export
+
+// É possível exportar instruções para serem usadas em arquivos externos
+// Usando o export numa variável/função
+
+// funções.js
+// export const PI = 3.1415;
+
+// Main.js
+// import { PI } from './funções.js';
+
+// É possível importar tudo do arquivo, com *
+// import * as CONSTANTES from './funções.js'
