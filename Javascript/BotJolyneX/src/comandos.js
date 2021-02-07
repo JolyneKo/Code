@@ -24,6 +24,20 @@ class Comandos {
         else
             return num * factorial(num - 1); 
     }
+
+    static cadastrarUser(user, userEmail) {
+        const obj = {
+            usuário: user,
+            email: userEmail
+        }
+
+        const jsonUser = JSON.stringify(obj);
+
+        fs.writeFile(`./users/${obj.usuário}.json`, jsonUser, error => {
+            if (error) throw error;
+            console.log('Novo usuário cadastrado');
+        });
+    }
 }
 
 module.exports = Comandos;

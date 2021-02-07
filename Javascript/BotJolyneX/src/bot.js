@@ -10,8 +10,7 @@ client.on('ready', () => {
         `Bot iniciado com sucesso
         Nome: ${client.user.tag}
         ID: ${client.user.id}`);
-    client.user.setActivity("Nekopara 5", {type: "WATCHING"});
-    client.user.setStatus('idle');
+    client.user.setActivity("Nekopara 5", {type: "PLAYING"});
 });
 
 client.on('message', message => {
@@ -48,7 +47,6 @@ client.on('message', message => {
                         {name: '$google', value: 'Pesquisa no google'},
                         {name: '$youtube', value: 'Pesquisa no Youtube'},
                         {name: '$pornhub', value: 'Pesquisa no Porhub'},
-                        {name: '$dm', value: 'Enviar mensagem na dm de alguém'},
                         {name: '$papeltesoura', value: 'Joga papel tesoura com você'},
                         {name: '$convite', value: 'Link de convite do bot'}
                     )
@@ -192,8 +190,39 @@ client.on('message', message => {
                 message.channel.send(phEmbed);
                 break;
             case 'convite':
-                message.channel.send('https://discord.com/api/oauth2/authorize?client_id=807340480509640734&permissions=8&scope=bot');
+                const conviteEmbed = new Discord.MessageEmbed()
+                    .setColor('#10defe')
+                    .setTitle('Link para me convidar')
+                    .setDescription('https://bit.ly/3aLLoPn');
+                message.channel.send(conviteEmbed);
                 break;
+            case 'dm':
+                const person = client.channels.cache.get('720305459679985687');
+                person.send("Eae");
+            case 'cadastrar':
+                try {
+                    
+                    const infos = args.join(' ').split(' ')
+                        .filter((item) => item != '' && item != ',');
+                    
+                    const email = args.filter((text) => text.includes('@'));
+                    
+                    if (infos.length > 1) {
+                        var user = args
+                            .filter((text) => !text.includes('@'))
+                            .join('');
+                    } else {
+                        var user = message.author.tag;
+                    }
+                    
+                    if (email.length < 1) throw 'Não é email';
+                    
+                    Comandos.cadastrarUser(user, email);
+                    message.channel.send('Usuário cadastrado com sucesso!');
+                } catch (error) {
+                    console.log(error);
+                    message.reply('Não foi possível cadastrar');
+                }
 
         }
     }
