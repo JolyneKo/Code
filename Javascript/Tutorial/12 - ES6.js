@@ -139,3 +139,35 @@ const [a, b,, ...resto] = [1, 2, 3, 4, 5, 6];
 
 // É possível importar tudo do arquivo, com *
 // import * as CONSTANTES from './funções.js'
+
+// Promesas
+
+// Promesas são igual promesas da vida real, elas podem ser concluídas (resolvidas), ou desistidas (rejeitadas).
+// Promise é um construtor, que executa uma função com parâmetros Resolve e Reject, métodos que permitem
+// Resolver ou rejeitar uma promesa.
+// Uma promesa tem três estados:
+// Pending
+// Fullfilled
+// Rejected
+// 
+// Pending, quando ela está esperando pelo resultado (nem rejeitada, nem resolvida).
+// Fullfilled, quando for resolvida
+// Rejected, quando for rejeitada
+
+const promesa = new Promise((resolve, reject) => {
+    if (true) {
+        resolve('Mensagem quando resolvida');
+    } else {
+        reject('Mensagem quando rejeitada');
+    }
+})
+
+// Quando a promesa é chamada, .then é executado automaticamente quando ela for resolvida,
+// .then executa uma função quando for resolvida, essa função pode ter a mensagem que o resolve() mandou
+//
+// Quando a promesa é rejeitada, .catch é executado automáticamente,
+// .catch executa uma função quando for rejeitada, essa função pode ter a mensagem do reject();
+
+promesa
+    .then(mensagem => console.log(mensagem)) // 'Mensagem quando resolvida'
+    .catch(error => console.log(error)) // 'Mensagem quando rejeitada'
