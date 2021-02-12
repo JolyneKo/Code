@@ -11,6 +11,7 @@ body {
   position: relative;
   min-height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .main {
@@ -22,6 +23,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .main .letra-inicial {
@@ -40,10 +43,66 @@ body {
   margin: 30px auto;
   width: 80%;
   height: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main img:hover {
   -webkit-box-shadow: 0 0 10px 5px rgba(110, 209, 255, 0.3);
           box-shadow: 0 0 10px 5px rgba(110, 209, 255, 0.3);
+}
+
+.bottom {
+  background-color: #fff;
+  width: 10vw;
+  height: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bottom a {
+  color: #112c51;
+  text-decoration: none;
+}
+
+.bottom:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: black;
+  color: white;
+}
+
+.area {
+  height: 4vh;
+  width: 10vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.bottomAparece {
+  height: 4vh;
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */

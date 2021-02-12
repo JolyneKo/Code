@@ -1,0 +1,5 @@
+Comentários são ignorados pelo navegador,
+são representados por /* e */, tudo entre eles é ignorado.
+Os comentários podem ser de uma linha, ou multiplas linhas.
+
+/* Comentário */

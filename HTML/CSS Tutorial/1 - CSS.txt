@@ -1,0 +1,4 @@
+Cascading Style Sheets (CSS) é uma linguagem de estilo usada para descrever o estilo de um documento HTML ou XML.
+O CSS descreve como os elementos vão ser mostrados na tela.
+HTML é usado para estrutura, atualmente na versão HTML5
+CSS é usado para o estilo e apresentação, atualmente no CSS3

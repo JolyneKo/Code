@@ -35,6 +35,12 @@
   cursor: pointer;
 }
 
+.barra-superior .titulo:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-shadow: 0 0 10px rgba(110, 209, 255, 0.5);
+}
+
 .barra-superior .menu-icon {
   position: absolute;
   left: 1rem;

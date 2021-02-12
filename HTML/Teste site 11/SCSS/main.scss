@@ -9,6 +9,7 @@ body {
   position: relative;
   min-height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 // main
@@ -21,6 +22,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.4rem;
+  transition: all 0.5s;
 
   .letra-inicial {
     font-size: 4rem;
@@ -37,9 +39,51 @@ body {
     margin: 30px auto;
     width: 80%;
     height: auto;
+    transition: all 0.3s;
 
     &:hover {
       box-shadow: 0 0 10px 5px rgba(110, 209, 255, 0.3);
     }
   }
+}
+
+// Botão ir para o fim
+.bottom {
+  background-color: $primaryColor;
+  width: 10vw;
+  height: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  overflow: hidden;
+  white-space: nowrap;
+  @include alignCenter(row);
+
+  a {
+    color: $secondaryColor;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: black;
+    color: white;
+  }
+}
+
+.area {
+  height: 4vh;
+  width: 10vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.bottomAparece {
+  height: 4vh;
+  visibility: visible;
 }

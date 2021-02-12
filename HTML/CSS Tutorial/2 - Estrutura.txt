@@ -1,0 +1,50 @@
+O CSS pode ser escrito como atributo.
+Com a tag <style>
+Ou com um arquivo externo, com a extensão .css
+
+O CSS usa os seletores para selecionar o elemento para aplicar o estilo.
+O seletor pode ser um elemento, um ID, uma classe e outros.
+As declarações estão delimitadas pelas chaves, contendo
+as propriedades dos elementos, e o valor da propriedade,
+elas são separadas por dois pontos.
+As declarações são separadas por ponto e vírgula.
+
+h2 {
+    color: red;
+    font-size: 5px;
+}
+
+
+Seletores: 
+
+Selecionado classe:
+
+.texto {
+    color: black;
+}
+
+Selecionando por ID:
+
+#cabeçalho {
+    font-weight: bold;
+}
+
+É possível selecionar um elemento específico de uma classe:
+
+p.texto {
+    color: yellow;
+}
+
+Seleciona o elemento p da classe texto
+
+É possível aplicar estilo para vários elementos:
+
+h1, h2, h3 {
+    font-size: 1.3em;
+}
+
+É possível selecionar todos os elementos, com o seletor universal:
+
+* {
+    margin: 0;
+}

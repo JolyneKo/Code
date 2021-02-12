@@ -21,6 +21,11 @@ $altura: 50px;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+
+    &:hover {
+      transition: all 0.3s;
+      text-shadow: 0 0 10px rgba(110, 209, 255, 0.5);
+    }
   }
 
   .menu-icon {

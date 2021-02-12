@@ -6,7 +6,9 @@
     <title>Teste site 09</title>
     <link rel="stylesheet" href="../CSS/barra-superior.css" />
     <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="stylesheet" href="../CSS/barra-lateral.css" />
     <script defer src="../scripts/barra-superior.js"></script>
+    <script defer src="../scripts/main.js"></script>
   </head>
   <body>
     <header class="barra-superior">
@@ -18,9 +20,30 @@
       </div>
     </header>
 
+    <nav class="barra-lateral">
+      <h2 class="menu">Menu</h2>
+      <ul class="links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">News</a>
+        </li>
+        <li>
+          <a href="#">HTML3</a>
+        </li>
+        <li>
+          <a href="#">CSS5</a>
+        </li>
+        <li>
+          <a href="#">Javascript</a>
+        </li>
+      </ul>
+    </nav>
+
     <main class="main">
       <p>
-        <span class="letra-inicial">L</span>orem ipsum dolor sit amet
+        <span class="letra-inicial" id="topo">L</span>orem ipsum dolor sit amet
         consectetur adipisicing elit. Error rerum consectetur deserunt culpa ut.
         Consectetur, eius nihil explicabo vero ullam unde repudiandae! Natus
         facere autem esse! Dignissimos ut possimus suscipit aperiam aut ex quam
@@ -86,6 +109,12 @@
         accusamus maxime rerum veritatis impedit minima quis aliquam quibusdam
         perferendis nulla!
       </p>
+
+      <div class="area">
+        <div class="bottom">
+          <a href="#topo">Ir para o topo</p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
