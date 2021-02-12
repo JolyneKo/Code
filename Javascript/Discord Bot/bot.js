@@ -3,7 +3,7 @@ const Discord = require('discord.js'); // Importa Packote discord.js
 const fs = require('fs');
 
 // Token
-const token = 'ODA3MjgzNTUxNjgyMjk3ODc2.YB1vZQ.Fte9q10rIBQZuM_wl3gcT2CupfY';
+const token = '***';
 const client = new Discord.Client(); // Cria instância do Client Discord
 
 // Event Listener, executa quando o bot está pronto
