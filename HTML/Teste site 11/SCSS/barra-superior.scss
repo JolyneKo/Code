@@ -1,0 +1,38 @@
+@import 'variáveis';
+@import 'mixins';
+@import 'resets';
+
+// Variáveis
+$altura: 50px;
+
+// Barra superior
+.barra-superior {
+  width: 100%;
+  height: $altura;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  position: fixed;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
+  @include alignCenter(row);
+
+  .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    position: absolute;
+    left: 1rem;
+    cursor: pointer;
+
+    .linha {
+      width: 20px;
+      height: 3px;
+      background-color: $secondaryColor;
+      margin: 3px 0;
+    }
+  }
+}

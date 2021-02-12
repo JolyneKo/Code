@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #112c51;
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  margin: 0 10%;
+  padding: 100px 0;
+  width: auto;
+  height: 100vh;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+.main .letra-inicial {
+  font-size: 4rem;
+  margin-right: 5px;
+}
+
+.main .letra-inicial:hover {
+  color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main img {
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+  height: auto;
+}
+
+.main img:hover {
+  -webkit-box-shadow: 0 0 10px 5px rgba(110, 209, 255, 0.3);
+          box-shadow: 0 0 10px 5px rgba(110, 209, 255, 0.3);
+}
+/*# sourceMappingURL=main.css.map */
