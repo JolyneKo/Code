@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.barra-lateral {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  background-color: rgba(17, 44, 81, 0.9);
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.barra-lateral .menu-icon {
+  position: absolute;
+  right: 16px;
+  top: 11px;
+}
+
+.barra-lateral .menu-icon div {
+  width: 23px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.barra-lateral h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.barra-lateral .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.barra-lateral .nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.barra-lateral .nav a:hover {
+  color: #4d95c9;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.lightLateral {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.lightLateral .nav a {
+  color: black;
+}
+
+.lightLateral .nav a:hover {
+  color: black;
+}
+/*# sourceMappingURL=barra-lateral.css.map */

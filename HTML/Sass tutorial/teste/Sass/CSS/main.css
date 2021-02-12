@@ -1,0 +1,34 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis */
+/* Maps */
+body {
+  background-color: #f3f3f3;
+  color: black;
+  font-weight: 700;
+}
+
+/* Nesting */
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+.main .firstLetter {
+  font-size: 2em;
+  /* & referencia ao elemento pai (firstLetter) */
+}
+.main .firstLetter:hover {
+  color: pink;
+}
+@media (max-width: 800px) {
+  .main {
+    font-size: 0.8em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

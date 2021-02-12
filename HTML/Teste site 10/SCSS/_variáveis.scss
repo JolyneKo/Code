@@ -1,0 +1,52 @@
+$font-color: white;
+$bg-color: #112c51;
+$superior-bg-color: black;
+$superior-font-color: white;
+$superior-menu-color: white;
+$lateral-bg-color: rgba(17, 44, 81, 0.9);
+$mobile-width: 800px;
+
+@mixin flexAlign($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin themeMain($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten($superior-bg-color, 100%);
+    color: darken($superior-font-color, 100%);
+  }
+}
+
+@mixin themeSuperior($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten($superior-bg-color, 100%);
+    color: darken($superior-font-color, 100%);
+    .menu-icon div {
+      background-color: darken($superior-menu-color, 100%);
+    }
+  }
+}
+
+@mixin themeLateral($light-theme: true) {
+  @if $light-theme {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+
+    .nav a {
+      color: black;
+    }
+
+    .nav a:hover {
+      color: black;
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}

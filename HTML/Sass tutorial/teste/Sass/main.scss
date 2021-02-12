@@ -1,0 +1,69 @@
+// Partial
+@import './resets';
+
+/* Variáveis */
+$bgColor: #f3f3f3;
+$text-color: black;
+$mobile: 800px;
+
+/* Maps */
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+// Functions
+@function weight($weightName) {
+    @return map-get($font-weights, bold);
+}
+
+// Mixin
+@mixin flexAlign($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background-color: lighten($bgColor, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+body {
+    background-color: $bgColor;
+    color: $text-color;
+    font-weight: weight(bold);
+}
+
+/* Nesting */
+.main {
+    width: 80%;
+    margin: 0 auto;
+
+    .firstLetter {
+        font-size: 2em;
+
+        /* & referencia ao elemento pai (firstLetter) */
+        &:hover {
+            color: pink;
+        }
+    }
+
+    @include mobile {
+        font-size: .8em;
+    }
+}
+
+.light {
+    @include theme($light-theme: false);
+}

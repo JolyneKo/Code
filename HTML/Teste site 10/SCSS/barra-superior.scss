@@ -1,0 +1,50 @@
+// Partials
+@import './variáveis';
+@import './resets';
+
+// Variáveis
+$altura: 50px;
+
+// Barra superior
+.barra-superior {
+  width: 100%;
+  height: $altura;
+  overflow-x: hidden;
+  background-color: $superior-bg-color;
+  color: $superior-font-color;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+
+  @include flexAlign(rows);
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  img {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    left: 30px;
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 15px;
+
+    div {
+      background-color: $superior-menu-color;
+      width: 23px;
+      height: 3px;
+      margin: 5px 0;
+    }
+  }
+
+  @include mobile {
+    font-size: 1em;
+  }
+}
+
+.light {
+  @include themeSuperior($light-theme: true);
+}

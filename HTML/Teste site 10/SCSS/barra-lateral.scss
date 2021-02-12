@@ -1,0 +1,63 @@
+@import 'variáveis';
+@import 'resets';
+
+$largura: 100%;
+
+// Barra lateral
+.barra-lateral {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  background-color: $lateral-bg-color;
+  color: $font-color;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transition: all 0.5s;
+
+  @include flexAlign(column);
+
+  .menu-icon {
+    position: absolute;
+    right: 16px;
+    top: 11px;
+  }
+
+  .menu-icon div {
+    width: 23px;
+    height: 3px;
+    background-color: $superior-bg-color;
+    margin: 5px 0;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    @include flexAlign(column);
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+
+    &:hover {
+      color: #4d95c9;
+      font-size: 1.4rem;
+      text-decoration: underline;
+    }
+  }
+}
+
+.lightLateral {
+  @include themeLateral($light-theme: true);
+}
