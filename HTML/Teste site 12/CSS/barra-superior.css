@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.barra-superior {
+  background-color: #ffab2d;
+  width: 100%;
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.barra-superior .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  position: absolute;
+  left: 250px;
+  cursor: pointer;
+}
+
+.barra-superior .nav ul {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  font-size: 1.2rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.barra-superior .nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.barra-superior .nav a:hover {
+  background-color: #f8b550;
+}
+
+.barra-superior .menu-icon {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+}
+
+.barra-superior .menu-icon .linha {
+  width: 23px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: black;
+}
+/*# sourceMappingURL=barra-superior.css.map */

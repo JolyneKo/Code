@@ -1,0 +1,59 @@
+@import 'variáveis';
+@import 'mixins';
+@import 'reset';
+
+// Variáveis
+$altura: 50px;
+
+// Barra superior
+.barra-superior {
+  background-color: $primaryColor;
+  width: 100%;
+  height: $altura;
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  @include centro(row);
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $secondaryColor;
+    position: absolute;
+    left: 250px;
+    cursor: pointer;
+  }
+
+  .nav ul {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 1.2rem;
+    list-style: none;
+    @include centro(row);
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: rgb(248, 181, 80);
+    }
+  }
+
+  .menu-icon {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    .linha {
+      width: 23px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: black;
+    }
+  }
+}
