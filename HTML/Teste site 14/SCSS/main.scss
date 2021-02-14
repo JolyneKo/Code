@@ -1,0 +1,50 @@
+@import 'reset';
+@import 'variáveis';
+@import 'mixins';
+
+// Body
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: white;
+  display: grid;
+  grid-template-columns: $lateralLargura 1fr;
+  grid-template-rows: $navAltura 1fr;
+  color: $fontColor;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// Main
+.main {
+  background-color: white;
+  padding: 20px;
+}
+
+.container_main {
+  background-color: $mainColor;
+  color: $fontColor;
+  padding: 30px;
+  height: 100%;
+  line-height: 1.3rem;
+
+  .main_header {
+    color: $headerColor;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main_texto {
+    font-size: 1.5rem;
+  }
+
+  #imagem_1 {
+    display: block;
+    width: 700px;
+    height: auto;
+    margin: 20px auto;
+  }
+}

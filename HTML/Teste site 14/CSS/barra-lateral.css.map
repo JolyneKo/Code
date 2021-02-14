@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB;;ADCD,AAAA,cAAc,CAAC;EACb,gBAAgB,EELH,cAAc;EFM3B,KAAK,EEAU,IAAI;EFCnB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;CAad;;AAjBD,AAME,cANY,CAMZ,cAAc,CAAC;EACb,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,GAAG;EAClB,KAAK,EAAE,KAAK;CACb;;AAVH,AAYE,cAZY,CAYZ,aAAa,CAAC;EACZ,SAAS,EAAE,MAAM;EACjB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,MAAM;CACpB",
+    "sources": [
+        "../SCSS/barra-lateral.scss",
+        "../SCSS/_reset.scss",
+        "../SCSS/_variáveis.scss",
+        "../SCSS/_mixins.scss"
+    ],
+    "names": [],
+    "file": "barra-lateral.css"
+}

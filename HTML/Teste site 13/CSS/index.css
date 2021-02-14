@@ -1,0 +1,57 @@
+:root {
+  --altura: 1000px;
+  --largura: 500px;
+  --bg-color: rgb(212, 212, 212);
+}
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: var(--altura);
+  height: var(--largura);
+  background-color: var(--bg-color);
+  border: grey 1px solid;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.player {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background-color: red;
+  bottom: 0;
+  left: 50px;
+  transition: 0.3s;
+}
+
+.inimigo {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: seagreen;
+  bottom: 0;
+  right: 0;
+  animation: inimigo 2.5s infinite linear forwards;
+}
+
+.player_jump {
+  transform: translateY(-70px);
+}
+
+@keyframes inimigo {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 1100px;
+  }
+}

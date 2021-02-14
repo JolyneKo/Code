@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'variáveis';
+@import 'mixins';
+
+// Barra Lateral
+.barra-lateral {
+  background-color: $lateralColor;
+  width: $lateralLargura;
+  height: 100%;
+  padding: 15px;
+
+  .lateral_title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: white;
+  }
+
+  .lateral_text {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.5rem;
+  }
+}

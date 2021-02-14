@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.barra-lateral {
+  background-color: MediumSeaGreen;
+  width: 20vw;
+  height: 100%;
+  padding: 15px;
+}
+
+.barra-lateral .lateral_title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.barra-lateral .lateral_text {
+  font-size: 1.1rem;
+  color: black;
+  line-height: 1.5rem;
+}
+/*# sourceMappingURL=barra-lateral.css.map */
