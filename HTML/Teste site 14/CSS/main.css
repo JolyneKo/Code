@@ -33,23 +33,23 @@ body {
   color: black;
   padding: 30px;
   height: 100%;
-  line-height: 1.3rem;
 }
 
 .container_main .main_header {
   color: grey;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.container_main .main_texto {
-  font-size: 1.5rem;
+.container_main .main_texto_1, .container_main .main_texto_2 {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
 }
 
 .container_main #imagem_1 {
   display: block;
-  width: 700px;
+  width: auto;
   height: auto;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 /*# sourceMappingURL=main.css.map */

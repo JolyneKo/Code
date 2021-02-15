@@ -13,14 +13,14 @@
 }
 
 .barra-lateral .lateral_title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 5px;
   color: white;
 }
 
 .barra-lateral .lateral_text {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: black;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 /*# sourceMappingURL=barra-lateral.css.map */

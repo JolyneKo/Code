@@ -29,22 +29,26 @@ body {
   color: $fontColor;
   padding: 30px;
   height: 100%;
-  line-height: 1.3rem;
 
   .main_header {
     color: $headerColor;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
 
-  .main_texto {
-    font-size: 1.5rem;
+  .main_texto_1 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
+
+  .main_texto_2 {
+    @extend .main_texto_1;
   }
 
   #imagem_1 {
     display: block;
-    width: 700px;
+    width: auto;
     height: auto;
-    margin: 20px auto;
+    margin: 50px auto;
   }
 }

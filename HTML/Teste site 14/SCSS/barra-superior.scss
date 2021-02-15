@@ -13,7 +13,7 @@
 
   .titulo {
     color: $titleColor;
-    font-size: 1.7rem;
+    font-size: 2.3rem;
     font-weight: bold;
     display: grid;
     justify-content: center;
@@ -30,9 +30,9 @@
     @include alinharCentro(row);
 
     a {
-      line-height: 2rem;
+      line-height: 2.7rem;
       padding: $navAltura 20px;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: black;
       text-decoration: none;
 
