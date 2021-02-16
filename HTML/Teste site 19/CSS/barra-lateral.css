@@ -1,0 +1,48 @@
+.barra-lateral {
+  background-color: rgb(1, 1, 61);
+  width: 0;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
+  border-right: rgb(172, 12, 12) 10px solid;
+  box-shadow: inset -10px 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.lateral_aberto {
+  width: 250px;
+  padding: 0 10px;
+}
+
+.barra-lateral h2 {
+  font-size: 2.5rem;
+  transform: translateY(50px);
+}
+
+.barra-lateral .links {
+  list-style: none;
+  transform: translateY(80px);
+}
+
+.barra-lateral li {
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+  border-top: 3px groove grey;
+}
+
+.barra-lateral a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
+.barra-lateral li:hover {
+  background-color: rgb(34, 34, 145);
+}
