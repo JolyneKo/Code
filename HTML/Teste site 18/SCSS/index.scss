@@ -1,0 +1,37 @@
+@import 'reset';
+@import 'variáveis';
+@import 'mixins';
+
+// Variável
+$lateral-altura: 800px;
+
+body {
+  min-height: 100%;
+  background-color: #f4f4f4;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 500px 1fr 500px;
+  grid-template-rows: 1fr;
+  padding: 150px 0;
+}
+
+.lateral_1 {
+  width: $lateral-largura;
+  height: $lateral-altura;
+  padding: 30px;
+  background-color: $lateral-color;
+  grid-column: 1/2;
+  margin: 0 auto;
+}
+
+.lateral_2 {
+  grid-column: 3/4;
+  @extend .lateral_1;
+}
+
+.texto {
+  height: 1300px;
+  background-color: $main-color;
+}

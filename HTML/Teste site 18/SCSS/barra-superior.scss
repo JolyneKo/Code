@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'variáveis';
+@import 'mixins';
+
+.barra-superior {
+  width: 100%;
+  height: $superior-altura;
+  background-color: $superior-color;
+  position: fixed;
+  top: 0;
+  @include alinharCentro(row);
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 30px;
+
+    .linha {
+      width: 40px;
+      height: 5px;
+      background-color: black;
+      margin: 10px 0;
+    }
+  }
+}

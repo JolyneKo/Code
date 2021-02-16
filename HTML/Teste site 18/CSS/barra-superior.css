@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.barra-superior {
+  width: 100%;
+  height: 100px;
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.barra-superior img {
+  width: 200px;
+  height: auto;
+}
+
+.barra-superior .menu-icon {
+  position: absolute;
+  right: 30px;
+}
+
+.barra-superior .menu-icon .linha {
+  width: 40px;
+  height: 5px;
+  background-color: black;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=barra-superior.css.map */
