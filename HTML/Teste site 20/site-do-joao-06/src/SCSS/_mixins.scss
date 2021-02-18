@@ -1,0 +1,21 @@
+@mixin alinharCentro($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme, $bgColor, $fontColor) {
+  @if $light-theme {
+    background-color: lighten($bgColor, 100%);
+    color: darken($fontColor, 100%);
+  } @else {
+    background-color: lighten($bgColor, 100%);
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

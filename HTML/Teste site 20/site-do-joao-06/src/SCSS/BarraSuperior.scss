@@ -1,0 +1,85 @@
+@import 'reset';
+@import 'variáveis';
+@import 'mixins';
+
+$altura: 100px;
+
+.BarraSuperior {
+  width: 100%;
+  height: $altura;
+  background-color: $primaryColor;
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  @include alinharCentro(row);
+  justify-content: start;
+  transition: 0.5s;
+
+  img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    transform: translateX(50px);
+    cursor: pointer;
+  }
+
+  .iconSuperior {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  .links {
+    list-style: none;
+    transform: translateX(150px);
+    @include alinharCentro(row);
+  }
+
+  .links li {
+    width: auto;
+    height: 100%;
+    padding: 20px;
+
+    &:hover {
+      background-color: lighten($primaryColor, 10%);
+    }
+  }
+
+  .links a {
+    color: $fontColor;
+    text-decoration: none;
+    font-size: 1.7rem;
+  }
+
+  @include mobile {
+    .links {
+      display: none;
+    }
+
+    .iconSuperior {
+      right: 20px;
+    }
+
+    .logo {
+      transform: translateX(30px);
+    }
+  }
+}
+
+.light {
+  @include theme(true, $primaryColor, $fontColor);
+
+  .links li:hover {
+    background-color: darken(white, 10%);
+  }
+
+  .links a {
+    color: darken($fontColor, 100%);
+  }
+
+  .iconSuperior {
+    color: darken($fontColor, 100%);
+  }
+}
