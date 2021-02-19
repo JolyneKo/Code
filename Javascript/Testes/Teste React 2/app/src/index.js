@@ -6,22 +6,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      number: 1,
-      texto: 'Texto',
+      cliques: 0,
     }
   }
 
-  clickHandler() {
-    const cliques = ++this.state.number;
-    this.state.texto = `Número de cliques: ${cliques}`;
-    ReactDOM.render(<App/>, document.getElementById('root'));
+  counter() {
+    this.setState(prevState => ({
+      cliques: prevState.cliques + 1,
+    }), () => {
+      console.log(this.state.cliques);
+    });
   }
 
   render() {
     return (
       <>
-        <p>{this.state.texto}</p>
-        <button onClick={() => this.clickHandler()}>Click me</button>
+        <p>Número de cliques: {this.state.cliques}</p>
+        <button onClick={() => this.counter()}>Click me</button>
       </>
     );
   }
