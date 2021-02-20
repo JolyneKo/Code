@@ -130,7 +130,7 @@
   }
 
   .container_settings {
-    width: 0;
+    width: auto;
     height: 0;
     background-color: black;
     position: absolute;
@@ -140,7 +140,8 @@
     flex: column;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    transition: 1s;
+    visibility: hidden;
+    overflow: hidden;
   }
 
   .container_settings ul {
@@ -160,8 +161,7 @@
   }
 
   .settings_open {
-    width: auto;
-    height: auto;
+    animation: settings_abrir 0.5s forwards;
   }
 
   .superior_logo {
@@ -174,5 +174,17 @@
 
   .Pesquisar {
     display: none;
+  }
+
+  @keyframes settings_abrir {
+    from {
+      height: 0;
+      padding: 0 20px;
+    }
+    to {
+      height: 155px;
+      visibility: visible;
+      padding: 20px;
+    }
   }
 }
