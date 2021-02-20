@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  height: 100%;
+}
+
+:root {
+  --alturaBarra: 100px;
+}
+
+.BarraSuperior {
+  background-color: orange;
+  width: 100%;
+  height: var(--alturaBarra);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BarraSuperior h1 {
+  color: tomato;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.BarraSuperior span {
+  color: mediumseagreen;
+}
+
+.Main {
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.upload button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 40px;
+  background-color: tomato;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.upload input[type='file'] {
+  position: absolute;
+  left: 0;
+  opacity: 100;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+.inputs input[type='submit'] {
+  background-color: mediumseagreen;
+  width: 200px;
+  height: 50px;
+  border-radius: 40px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.upload span {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  width: 200px;
+  text-align: justify;
+}
