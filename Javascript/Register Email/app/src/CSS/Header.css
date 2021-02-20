@@ -1,0 +1,178 @@
+:root {
+  --alturaSuperior: 100px;
+  --bgColorSuperior: orange;
+  --PesquisarAltura: 50px;
+}
+
+@media (min-width: 768px) {
+  .barra-superior {
+    background-color: var(--bgColorSuperior);
+    width: 100%;
+    height: var(--alturaSuperior);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  .superior_settings_icon {
+    font-size: 2.5rem;
+    color: black;
+    position: absolute;
+    right: 50px;
+  }
+
+  .container_settings {
+    width: 115px;
+    height: 0;
+    background-color: black;
+    position: absolute;
+    right: calc(50px);
+    top: 80px;
+    display: flex;
+    flex: column;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .settings_open {
+    animation: settings_abrir 0.5s forwards;
+  }
+
+  @keyframes settings_abrir {
+    from {
+      height: 0;
+      padding: 0 20px;
+    }
+    to {
+      height: 155px;
+      visibility: visible;
+      padding: 20px;
+    }
+  }
+
+  .container_settings ul {
+    text-align: center;
+    line-height: 1.7rem;
+    list-style: none;
+  }
+
+  .container_settings a {
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .container_settings a:hover {
+    text-decoration: underline;
+  }
+
+  .superior_logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 50px;
+  }
+
+  .Pesquisar {
+    position: absolute;
+    left: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .Pesquisar .barraPesquisa {
+    width: 250px;
+    height: var(--PesquisarAltura);
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 40px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: black;
+    padding: 0 30px;
+    float: left;
+  }
+
+  .Pesquisar .Pesquisar_btn {
+    background-color: rgb(198, 29, 37);
+    width: 100px;
+    height: var(--PesquisarAltura);
+    border: none;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 1rem;
+    font-weight: bolder;
+    float: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .barra-superior {
+    background-color: var(--bgColorSuperior);
+    width: 100%;
+    height: var(--alturaSuperior);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  .superior_settings_icon {
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    right: 30px;
+  }
+
+  .container_settings {
+    width: 0;
+    height: 0;
+    background-color: black;
+    position: absolute;
+    right: calc(50px);
+    top: 80px;
+    display: flex;
+    flex: column;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 1s;
+  }
+
+  .container_settings ul {
+    text-align: center;
+    line-height: 1.7rem;
+    list-style: none;
+  }
+
+  .container_settings a {
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .container_settings a:hover {
+    text-decoration: underline;
+  }
+
+  .settings_open {
+    width: auto;
+    height: auto;
+  }
+
+  .superior_logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 30px;
+  }
+
+  .Pesquisar {
+    display: none;
+  }
+}

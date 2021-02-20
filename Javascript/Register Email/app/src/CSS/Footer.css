@@ -1,0 +1,10 @@
+:root {
+  --bgColorFooter: rgb(39, 39, 39);
+  --alturaFooter: 300px;
+}
+
+.Footer {
+  width: 100%;
+  height: var(--alturaFooter);
+  background-color: var(--bgColorFooter);
+}
