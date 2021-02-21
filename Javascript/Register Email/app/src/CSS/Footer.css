@@ -3,8 +3,18 @@
   --alturaFooter: 300px;
 }
 
-.Footer {
-  width: 100%;
-  height: var(--alturaFooter);
-  background-color: var(--bgColorFooter);
+@media (min-width: 768px) {
+  .Footer {
+    width: 100%;
+    height: var(--alturaFooter);
+    background-color: var(--bgColorFooter);
+  }
+}
+
+@media (max-width: 768px) {
+  .Footer {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bgColorFooter);
+  }
 }
