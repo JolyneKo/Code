@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB;;ADED,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,eAAe,CAAC;IACd,KAAK,EAAE,IAAI;IACX,MAAM,EAND,KAAK;IAOV,gBAAgB,EANV,KAAK;IAOX,OAAO,EAAE,IAAI;IACb,WAAW,EAAE,MAAM;IACnB,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,kBAAkB;GAC5C",
+    "sources": [
+        "../SCSS/barra-superior.scss",
+        "../SCSS/_reset.scss",
+        "../SCSS/_variáveis.scss"
+    ],
+    "names": [],
+    "file": "barra-superior.css"
+}

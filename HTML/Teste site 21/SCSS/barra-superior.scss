@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'variáveis';
+
+$altura: 100px;
+$bgColor: black;
+
+@media (min-width: 768px) {
+  .barra-superior {
+    width: 100%;
+    height: $altura;
+    background-color: $bgColor;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+}

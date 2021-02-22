@@ -1,0 +1,8 @@
+$fontColor: black;
+
+@mixin alinharCentro($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
