@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,11 +9,13 @@
     <link rel="stylesheet" href="../CSS/index.css" />
     <link rel="stylesheet" href="../CSS/footer.css" />
     <link rel="shortcut icon" href="../Images/favicon.png" />
+    <script defer src="../JS/menu.js"></script>
     <title>Site do João 07</title>
   </head>
   <body>
     <header class="barra-superior">
-      <img src="../Images/logo.png" alt="logo" />
+      <img src="../Images/logo.png" alt="logo" class="logo" />
+
       <ul class="links">
         <li>
           <a href="#">Home</a>
@@ -30,7 +33,35 @@
           <a href="#">Contact Us</a>
         </li>
       </ul>
+
+      <div class="menu-icon">
+        <div class="linha"></div>
+        <div class="linha"></div>
+        <div class="linha"></div>
+      </div>
     </header>
+
+    <section class="Menu">
+      <h2>Menu</h2>
+
+      <ul class="Menu_links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">News</a>
+        </li>
+        <li>
+          <a href="#">Explore</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </section>
 
     <main class="Main">
       <div class="coluna_1">
@@ -77,6 +108,8 @@
 
       <div class="coluna_2">
         <aside class="popular">
+          <h2>Popular Posts</h2>
+
           <ul class="popular_posts">
             <li>
               <img src="../Images/popular_img1.jpg" alt="popular posts" />

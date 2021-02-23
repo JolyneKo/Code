@@ -16,8 +16,136 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  .barra-superior .logo {
+    width: 150px;
+    height: auto;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  .barra-superior .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 50px;
+  }
+  .barra-superior .links a {
+    font-size: 1.3rem;
+    color: orange;
+    text-decoration: none;
+  }
+  .barra-superior .links a:hover {
+    text-decoration: underline;
+  }
+  .barra-superior .links a:active {
+    text-decoration: underline;
+  }
+  .barra-superior .links li {
+    padding: 20px;
+  }
+  .barra-superior .links li:hover {
+    background-color: #1a1a1a;
+  }
+  .barra-superior .menu-icon {
+    display: none;
+  }
+  .Menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .barra-superior {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .barra-superior .logo {
+    width: 150px;
+    height: auto;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    cursor: pointer;
+  }
+  .barra-superior .links {
+    display: none;
+  }
+  .barra-superior .menu-icon {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+  }
+  .barra-superior .menu-icon .linha {
+    width: 40px;
+    height: 5px;
+    margin: 10px 0;
+    background-color: white;
+  }
+  .Menu {
+    position: absolute;
+    background-color: black;
+    width: 0;
+    height: 100%;
+    z-index: 44;
+    right: 0;
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    visibility: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .Menu h2 {
+    color: white;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+  }
+  .Menu .Menu_links {
+    text-align: center;
+    list-style: none;
+    line-height: 1.8rem;
+  }
+  .Menu a {
+    color: orange;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  .Menu a:hover {
+    text-decoration: underline;
+  }
+  .Menu a:active {
+    text-decoration: underline;
+  }
+  .Menu_aberto {
+    width: 60%;
+    visibility: visible;
   }
 }
 /*# sourceMappingURL=barra-superior.css.map */
