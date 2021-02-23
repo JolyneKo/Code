@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .barra-superior {
     width: 100%;
     height: 100px;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .barra-superior {
     width: 100%;
     height: 100px;

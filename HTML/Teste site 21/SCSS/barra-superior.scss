@@ -5,7 +5,7 @@ $altura: 100px;
 $bgColor: black;
 $menuLargura: 60%;
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .barra-superior {
     width: 100%;
     height: $altura;
@@ -65,7 +65,7 @@ $menuLargura: 60%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .barra-superior {
     width: 100%;
     height: $altura;

@@ -4,15 +4,17 @@
 html,
 body {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   height: 100%;
+  position: relative;
 }
 
 $bgColor: #f3f3f3;
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .Main {
     background-color: $bgColor;
     width: 100%;
@@ -155,7 +157,7 @@ $bgColor: #f3f3f3;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .Main {
     background-color: $bgColor;
     width: 100%;
