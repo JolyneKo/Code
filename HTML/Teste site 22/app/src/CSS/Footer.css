@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --footerAltura: 300px;
+}
+
+@media (min-width: 769px) {
+  .footer {
+    width: 100%;
+    height: var(--footerAltura);
+    background-color: rgb(59, 59, 59);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-items: center;
+  }
+
+  .footer_coluna {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    justify-self: flex-start;
+    border-left: 3px white solid;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+  }
+
+  .footer_links {
+    list-style-type: none;
+    line-height: 1.7rem;
+  }
+
+  .footer_coluna .coluna_title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .footer_links a {
+    color: grey;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .footer_links a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  span {
+    color: white;
+    font-size: 1.2rem;
+    transform: translateY(-80px);
+  }
+
+  img,
+  span {
+    justify-self: end;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 769px) {
+  .footer {
+    width: 100%;
+    height: var(--footerAltura);
+    background-color: rgb(59, 59, 59);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-items: center;
+  }
+
+  .footer_coluna {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    justify-self: flex-start;
+    border-left: 3px white solid;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .footer_links {
+    list-style-type: none;
+    line-height: 1.7rem;
+  }
+
+  .footer_coluna .coluna_title {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .footer_links a {
+    color: grey;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .footer_links a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    width: 150px;
+    height: auto;
+  }
+
+  span {
+    display: none;
+  }
+
+  img,
+  span {
+    justify-self: end;
+    margin-right: 30px;
+  }
+}

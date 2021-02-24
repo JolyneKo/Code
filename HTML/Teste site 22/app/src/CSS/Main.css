@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 769px) {
+  .main {
+    background: url('../Images/banner.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+  }
+
+  .main_texto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10rem;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: 3px solid red;
+    padding: 0 30px;
+    animation: typeEffect 3.5s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  @keyframes typeEffect {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: red;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .main {
+    background: url('../Images/banner_mobile.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    width: 90%;
+    height: 15%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 3px solid black;
+    animation: effect 0.5s forwards, effectBorder 0.5s 0.5s forwards;
+  }
+
+  .main_texto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+  }
+
+  @keyframes effect {
+    from {
+      width: 0;
+      height: 0;
+      padding: 0;
+      transform: rotate(-30deg);
+    }
+  }
+}
