@@ -4,11 +4,9 @@ const fs = require('fs');
 
 const server = express();
 
-server.use(express.urlencoded({ extended: true }));
+server.use(express.static(path.join(__dirname, 'public')));
 
-server.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pages/index.html'));
-});
+server.use(express.urlencoded({ extended: true }));
 
 server.post('/api/users', (req, res) => {
   const text = JSON.stringify(req.body);
