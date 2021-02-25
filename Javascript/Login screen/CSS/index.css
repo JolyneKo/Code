@@ -1,0 +1,54 @@
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+
+.main {
+  background: url('../Images/background.jpg') no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .container {
+  background-color: #f3f3f3;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container label {
+  color: black;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.container #submit {
+  margin-top: 30px;
+}
+
+.container #submit:focus {
+  background-color: grey;
+}
+
+.container input {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 40px;
+  padding: 10px 20px;
+  color: black;
+}
+
+.container h2 {
+  color: grey;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
