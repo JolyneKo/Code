@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ajax2.css" />
+    <title>Ajax 2</title>
+  </head>
+  <body>
+    <button id="btn1" onclick="loadUser()">Get user</button>
+    <h1>Users:</h1>
+    <ul id="users"></ul>
+
+    <script>
+      function loadUser() {
+        const XHR = new XMLHttpRequest();
+        XHR.open('GET', 'users.json', true);
+
+        XHR.onload = function () {
+          if (this.status === 200) {
+            const users = JSON.parse(this.responseText);
+            const usersElement = document.getElementById('users');
+
+            if (usersElement.innerHTML == '') {
+              users.forEach((user) => {
+                const userLI = document.createElement('li');
+                userLI.innerHTML = user.name;
+                usersElement.appendChild(userLI);
+              });
+            }
+          }
+        };
+
+        XHR.send();
+      }
+    </script>
+  </body>
+</html>

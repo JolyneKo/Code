@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ajax1.css" />
+    <title>Ajax 1</title>
+  </head>
+  <body>
+    <p id="text"></p>
+    <button id="button" onclick="loadText()">Get Text File</button>
+
+    <script>
+      const text = document.getElementById('text');
+
+      function loadText() {
+        // New XmlHttpRequest object
+        const XHR = new XMLHttpRequest();
+
+        // Open(method, url/file, if async);
+        XHR.open('GET', 'sample.txt', true);
+
+        // Quando estiver carregando o texto
+        XHR.onprogress = function () {
+          console.log(`Carregando... ReadyState: ${this.readyState}`);
+        };
+
+        // Quando for carregado, quando nós receber a response
+        XHR.onload = function () {
+          if (this.status === 200) {
+            console.log('Texto carregado!');
+            text.innerText = this.responseText;
+          } else {
+            console.log('Um erro ocorreu', this.status);
+          }
+        };
+
+        // Quando tiver erros
+        XHR.onerror = function () {
+          console.log('Um erro ocorreu na request...');
+        };
+
+        // Envia a request
+        XHR.send();
+      }
+    </script>
+  </body>
+</html>
