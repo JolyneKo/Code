@@ -4,13 +4,20 @@ import Item from './Item';
 function Main() {
   const [produtos, setProduto] = useState(() => ['Cenoura', 'Bolo', 'Batata']);
   const [novoProduto, setNovoProduto] = useState('');
+  const [isEmpty, setEmpty] = useState(false);
 
   const handleAdd = () => {
     const inclui = produtos.filter(nome => nome.toLowerCase() === novoProduto.toLowerCase())
 
 
-    if (novoProduto.length > 0 && inclui.length === 0 && novoProduto.match(/\S/gi) != null )
+    if (novoProduto.length > 0 && inclui.length === 0 && novoProduto.match(/\S/gi) != null ) {
       setProduto(prevValue => [...prevValue, novoProduto]);
+
+      if (produtos.length === 1) {
+        setEmpty(false);
+        setProduto([novoProduto]);
+      }
+    }
   }
 
   const handleNovoProduto = (e) => {
@@ -19,15 +26,24 @@ function Main() {
 
   return (
     <main className="main">
+      <div className="main_header">
+       <h1>Lista de Compras</h1>
+      </div>
 
-      <h1>Lista de Compras</h1>
+      <div className="main_container">
+        <h2 className="header">Items</h2>
 
-      <ul className="items">
-        {produtos.map((produto, index) => <Item produto={produto} key={index + 1} setProduto={setProduto}/>)}
-      </ul>
+        {(!isEmpty) ? <ul className="items">
+          {produtos.map((produto, index) => <Item produtos={produtos} produto={produto} key={index + 1} setProduto={setProduto} setEmpty={setEmpty}/>)}
+        </ul> : <p className="whenEmptyText">Lista Vazia</p>}
 
-      <button className="btn_add" onClick={handleAdd}>Add</button>
-      <input type="text" className="input_add" placeholder="nome do produto" onChange={handleNovoProduto}/>
+        <button className="btn_add" onClick={handleAdd}>Add</button>
+      
+        <div className="inputsNovoProduto">
+          <label htmlFor="novoProduto">Adicionar Produto</label>
+          <input type="text" className="input_add" placeholder="nome do produto" onChange={handleNovoProduto} id="novoProduto"/>
+        </div>
+      </div>
     </main>
   )
 }

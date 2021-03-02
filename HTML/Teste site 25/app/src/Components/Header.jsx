@@ -1,18 +1,25 @@
 import logo from '../Images/logo.png';
 
-function Header() {
+function Header({ onOpen }) {
   return (
     <header className="navbar">
-      <img src={logo} alt="logo"/>
+      <img src={logo} alt="logo" className="logo"/>
+
       <nav className="navigation">
           <ul className="links">
-            <li className="links"><a href="#.">Home</a></li>
-            <li className="links"><a href="#.">News</a></li>
-            <li className="links"><a href="#.">Contacts</a></li>
-            <li className="links"><a href="#.">Support</a></li>
-            <li className="links"><a href="#.">About Us</a></li>
+            <li className="link"><a href="#.">Home</a></li>
+            <li className="link"><a href="#.">News</a></li>
+            <li className="link"><a href="#.">Contacts</a></li>
+            <li className="link"><a href="#.">Support</a></li>
+            <li className="link"><a href="#.">About Us</a></li>
           </ul>
       </nav>
+
+      <div className="menu-icon" onClick={onOpen}>
+        <div className="linha"></div>
+        <div className="linha"></div>
+        <div className="linha"></div>
+      </div>
     </header>
   )
 }

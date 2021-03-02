@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Item({ produto, setProduto }) {
+function Item({ produtos, produto, setProduto, setEmpty }) {
   const [quantidade, setQuantidade] = useState(1);
 
   const handleIncrement = () =>{
@@ -12,18 +12,21 @@ function Item({ produto, setProduto }) {
   }
   
   const handleDelete = () => {
-    console.log(produto);
-    setProduto(prevValue => {
-      const resultado = prevValue.filter(value => value !== produto);
-      return [...resultado];
-    })
+    if (produtos.length > 1) {
+      setProduto(prevValue => {
+        const resultado = prevValue.filter(value => value !== produto);
+        return [...resultado];
+      })
+    } else {
+      setEmpty(prevValue => !prevValue);
+    }
   }
 
   return (
     <li className="item">
       <div className="info_produto" onDoubleClick={handleDelete}>
-        <span>{quantidade}</span> 
-        <span>{produto}</span>
+        <span className="quantidade">{quantidade}</span> 
+        <span className="nome">{produto}</span>
       </div>
 
 
