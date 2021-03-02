@@ -16,7 +16,9 @@ body,
   font-family: $font-main;
   padding: 20px;
   @include alinharCentro(column);
-  justify-content: end;
+  justify-content: flex-end;
+  min-height: 750px;
+  position: relative;
 
   .main_header {
     width: $main-container-largura;
@@ -29,7 +31,7 @@ body,
     padding: 20px;
     text-align: center;
     color: $main-font-color;
-    position: relative;
+    position: absolute;
     box-shadow: 0 0 7px 3px $shadow-color;
   }
 
@@ -159,6 +161,65 @@ body,
         border-radius: $novo-produto-border-radius;
         font-size: $font-size-novo-produto;
       }
+    }
+  }
+
+  @include mobile {
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 700px;
+    position: relative;
+
+    .main_header {
+      width: 100vw;
+      box-shadow: none;
+      border-radius: 0;
+      font-size: 1rem;
+      position: absolute;
+      top: 0;
+    }
+
+    .main_container {
+      width: 100vw;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 15px;
+      position: absolute;
+      top: 15%;
+
+      .header {
+        padding: 0 10px;
+        margin-bottom: 15px;
+      }
+
+      .btn_add {
+        top: 20px;
+      }
+    }
+  }
+
+  @include tablet {
+    width: 100vw;
+    overflow: hidden;
+    min-height: 700px;
+    position: relative;
+
+    .main_header {
+      width: 90vw;
+      box-shadow: none;
+      border-radius: 0;
+      font-size: 1.1rem;
+      position: absolute;
+      top: 2%;
+    }
+
+    .main_container {
+      width: 90vw;
+      box-shadow: none;
+      border-radius: 0;
+      position: absolute;
+      top: 10%;
     }
   }
 }
