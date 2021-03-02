@@ -144,7 +144,7 @@ body,
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: end;
   min-height: 750px;
   position: relative;
 }
@@ -159,7 +159,6 @@ body,
   padding: 20px;
   text-align: center;
   color: black;
-  position: absolute;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.7);
 }
 .main .main_container {
