@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site usando metodologia do BEM" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script defer src="JS/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/973f56b433.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Cards</title>
+  </head>
+  <body>
+    <header class="header">
+      <picture class="header__images">
+        <source
+          media="(max-width: 769px)"
+          srcset="IMG/logo2.png"
+          class="header__image--mobile"
+        />
+        <img src="IMG/logo.png" alt="logo" class="header__image--desktop" />
+      </picture>
+
+      <ul class="header__links">
+        <li class="header__link"><a href="/">Home</a></li>
+        <li class="header__link"><a href="/">Pages</a></li>
+        <li class="header__link"><a href="/">Terms</a></li>
+        <li class="header__link"><a href="/">About Us</a></li>
+        <li class="header__link"><a href="/">Contacts</a></li>
+      </ul>
+
+      <div class="header__icons__theme">
+        <i class="far fa-sun header__switch__theme"></i>
+      </div>
+
+      <i class="fas fa-bars header__menu__icon"></i>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <img
+          src="IMG/imagem__1.jpg"
+          alt="Rio bonito com montanhas no fundo"
+          class="card__image"
+        />
+        <h2 class="card__title">Alguma coisa</h2>
+        <p class="card__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          similique illo iusto labore repudiandae cum nemo dolorem, amet
+          voluptates blanditiis quos voluptatibus adipisci hic nihil autem eum,
+          odit doloremque sint doloribus iste quo dicta recusandae. Dolores
+          numquam illum voluptate expedita, vel assumenda dolor sed
+          necessitatibus repellendus iusto illo vero nemo
+        </p>
+
+        <ul class="card__tags">
+          <li class="card__tag card__tag--active"><a href="/">HTML</a></li>
+          <li class="card__tag"><a href="/">CSS</a></li>
+          <li class="card__tag"><a href="/">Javascript</a></li>
+          <li class="card__tag"><a href="/">SASS</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <img
+          src="IMG/imagem__2.jpg"
+          alt="Rio bonito com montanhas no fundo"
+          class="card__image"
+        />
+        <h2 class="card__title">Title</h2>
+        <p class="card__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          similique illo iusto labore repudiandae cum nemo dolorem, amet
+          voluptates blanditiis quos voluptatibus adipisci hic nihil autem eum,
+          odit doloremque sint doloribus iste quo dicta recusandae. Dolores
+          numquam illum voluptate expedita, vel assumenda dolor sed
+          necessitatibus repellendus iusto illo vero nemo
+        </p>
+        <ul class="card__tags">
+          <li class="card__tag card__tag--active">
+            <a href="/">React.js</a>
+          </li>
+          <li class="card__tag"><a href="/">Next.js</a></li>
+          <li class="card__tag"><a href="/">Javascript</a></li>
+          <li class="card__tag"><a href="/">Redux</a></li>
+          <li class="card__tag"><a href="/">Design</a></li>
+          <li class="card__tag"><a href="/">SASS</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

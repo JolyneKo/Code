@@ -1,0 +1,63 @@
+@use '../Abstracts' as *;
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+
+  &__images {
+    margin: 0 30px;
+    background-color: $header-bg-color;
+
+    .header__image--desktop {
+      width: 150px;
+      height: auto;
+    }
+
+    .header__image--mobile {
+      height: auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+
+    .header__link {
+      padding: 30px;
+    }
+
+    a {
+      color: $header-links-font-color;
+      font-family: $header-links;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: color 1s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__menu__icon {
+    visibility: hidden;
+  }
+
+  &__icons__theme {
+    position: absolute;
+    right: 50px;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  // Mobile
+  @include mobile {
+    &__links {
+      display: none;
+    }
+  }
+}
