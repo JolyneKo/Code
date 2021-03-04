@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Treinando minhas habilidades" />
+    <script type="module" defer src="JS/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="JS/modules/validations.js"></script>
+    <script type="module" src="JS/modules/functions.js"></script>
+    <title>Teste Site 27</title>
+  </head>
+  <body>
+    <main class="main">
+      <form class="forms">
+        <fieldset class="forms__container">
+          <legend class="forms__header">Login</legend>
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="forms__email"
+            id="email"
+            placeholder="Seu email..."
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="forms__password"
+            id="password"
+            placeholder="Sua senha..."
+          />
+
+          <label for="birthday">Data de nascimento</label>
+          <input type="date" class="forms__birthday" id="birthday" />
+
+          <label for="gender">Sexo</label>
+          <select id="gender" class="forms__gender">
+            <option value="">-- Selecione --</option>
+            <option value="Male">Masculino</option>
+            <option value="Female">Feminino</option>
+          </select>
+
+          <input type="submit" class="forms__submit" value="login" />
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
