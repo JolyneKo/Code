@@ -7,6 +7,9 @@ $null = null;
 $array = [1, 2, 3, 4, 5];
 
 class Dog {
+    private string $nome;
+    private int $idade;
+
     public function __construct($nome, $idade) {
         $this->nome = $nome;
         $this->idade = $idade;
@@ -20,7 +23,7 @@ class Dog {
 }
 
 $object = new Dog("Pedro", 12);
-// $object->bark();
+$object->bark();
 // Resource
 
 $fruits = ['Banana', 'Abacate', 'Mamão'];
