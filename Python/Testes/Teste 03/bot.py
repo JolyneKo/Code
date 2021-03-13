@@ -12,4 +12,4 @@ class Bot(discord.Client):
 
 client = Bot()
 
-client.run('ODA3MjgzNTUxNjgyMjk3ODc2.YB1vZQ.LJRrQXGOcOF3qz6H5aXB3Z5AsbM')
+client.run('***')
