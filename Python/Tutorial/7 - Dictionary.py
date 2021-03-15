@@ -11,3 +11,7 @@ lista_de_compras = {
 }
 
 lista_de_compras["Abacaxi"]  # 1
+
+# É possível adicionar um elemento usando a notação dos colchetes
+
+lista_de_compras["Cajú"] = 6
