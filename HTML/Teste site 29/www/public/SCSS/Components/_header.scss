@@ -1,0 +1,159 @@
+@use '../Abstracts/' as *;
+
+.header {
+    background-color: $header-color;
+    height: $header-altura;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: $header-shadow;
+    border-bottom: 5px solid $primary-color;
+
+    &__logo {
+        margin: 0 50px;
+        height: auto;
+    }
+
+    &__description {
+        color: black;
+        font-family: $header-description-font;
+        font-size: 1.3rem;
+    }
+
+    &__nav {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        height: 100%;
+
+        &__link {
+            padding: 0 20px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+            a {
+                color: black;
+                text-decoration: none;
+                font-family: $header-font;
+                font-size: 1.3rem;
+            }
+
+            .icon {
+                color: black;
+                font-size: 1.3rem;
+            }
+
+            &--active {
+                a {
+                    color: $primary-color;
+                }
+            }
+
+            &--category {
+                a {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__dropdown {
+        overflow: hidden;
+
+        &:hover &__content {
+            display: block;
+        }
+
+        &__content {
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+        
+        &__links {
+            list-style: none;
+            height: 100%;
+            background-color: $header-color;
+            box-shadow: $header-dropdown-shadow;
+            margin-top: 15px;
+            
+            &__link {
+                border-bottom: 1px solid rgb(201, 201, 201);
+                transition: 1s;
+                padding: 20px;
+                background-color: inherit;
+                transition: 0.5s;
+                
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+
+            a {
+                color: black;
+                font-family: $header-dropdown-font;
+                text-decoration: none;
+                font-family: 1.2rem;
+            }
+        }
+    }
+
+    &__menu__icon {
+        display: none;
+        visibility: hidden;
+    }
+
+    // Tablet
+    @include header__tablet {
+        &__description {
+            display: none;
+            visibility: none;
+        }
+    }
+
+    // Mobile
+    @include header__mobile {
+        justify-content: center;
+
+        &__nav {
+            display: none;
+            visibility: none;
+        }
+
+        &__description {
+            display: none;
+            visibility: none;
+        }
+        
+        &__menu__icon {
+            display: block;
+            visibility: visible;
+            color: $primary-color;
+            font-size: 3rem;
+            position: absolute;
+            right: 50px;
+        }
+    }
+
+    // Mobile (mini)
+    @include header__mobile--mini {
+        justify-content: center;
+
+        &__nav {
+            display: none;
+            visibility: none;
+        }
+
+        &__description {
+            display: none;
+            visibility: none;
+        }
+
+        &__logo {
+            width: 200px;
+        }
+    }
+
+}

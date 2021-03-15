@@ -1,0 +1,17 @@
+@mixin header__tablet {
+    @media (max-width: 1740px) and (min-width: 769px) {
+        @content;
+    }
+}
+
+@mixin header__mobile {
+    @media (max-width: 1252px) and (min-width: 488px) {
+        @content;
+    }
+}
+
+@mixin header__mobile--mini {
+    @media (max-width: 488px) {
+        @content;
+    }
+}
