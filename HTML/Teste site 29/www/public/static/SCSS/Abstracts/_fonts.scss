@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: "Aktiv Grotesk";
+    src: url('../../Fonts/AktivGroteskCorp-Regular.ttf');
+}
+
+// Header
+$header-font: "Inter", sans-serif;
+$header-description-font: "Roboto", sans-serif;
+$header-dropdown-font: 'Inter', sans-serif;
+
+// Main
+$main-header: 'Nunito Sans', sans-serif;
+$main-font: "Aktiv Grotesk", sans-serif;
+$container-header: "Montserrat", sans-serif;

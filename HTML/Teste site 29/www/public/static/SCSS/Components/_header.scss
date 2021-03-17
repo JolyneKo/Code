@@ -1,5 +1,6 @@
 @use '../Abstracts/' as *;
 
+// Header
 .header {
     background-color: $header-color;
     height: $header-altura;
@@ -7,19 +8,23 @@
     align-items: center;
     position: relative;
     box-shadow: $header-shadow;
-    border-bottom: 5px solid $primary-color;
+    z-index: 15;
 
+    // Logo
     &__logo {
         margin: 0 50px;
         height: auto;
     }
 
+    // Texto do lado do logo
     &__description {
         color: black;
         font-family: $header-description-font;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
+
+    // Navegação
     &__nav {
         display: flex;
         position: absolute;
@@ -37,12 +42,12 @@
                 color: black;
                 text-decoration: none;
                 font-family: $header-font;
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
             .icon {
                 color: black;
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
             &--active {
@@ -59,6 +64,7 @@
         }
     }
 
+    // Dropdown
     &__dropdown {
         overflow: hidden;
 
@@ -81,28 +87,92 @@
             
             &__link {
                 border-bottom: 1px solid rgb(201, 201, 201);
-                transition: 1s;
-                padding: 20px;
                 background-color: inherit;
-                transition: 0.5s;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                position: relative;
                 
                 &:hover {
                     background-color: $primary-color;
                 }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                &--category {
+                    .icon {
+                        transform: translateX(15px);
+                    }
+
+                    &:hover .dropdown__category {
+                    display: block;
+                    }
+                }
+
+                &__container {
+                    height: auto;
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    left: -223px;
+                    flex-direction: row-reverse; 
+
+                    .dropdown__category {
+                        display: none;
+                        box-shadow: $container-shadow;
+
+                        .links {
+                            list-style: none;
+                            background-color: $header-color;
+                            
+                            .link {
+                                border-bottom: 1px solid rgb(201, 201, 201);
+                                background-color: inherit;
+                                display: flex;
+                                align-items: center;
+                                
+                                &:hover {
+                                    background-color: $primary-color;
+                                }
+                                
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                            }
+                            
+                            a {
+                                color: black;
+                                font-family: $header-dropdown-font;
+                                text-decoration: none;
+                                font-family: 1.1rem;
+                                text-align: center;
+                                margin: 24px 30px;
+                            }
+                        }
+                    }
+                }
+
             }
 
             a {
                 color: black;
                 font-family: $header-dropdown-font;
                 text-decoration: none;
-                font-family: 1.2rem;
+                font-family: 1.1rem;
+                width: 100;
+                margin: 30px;
             }
-        }
+
+        }   
     }
 
+    // Icone para abrir o menu
     &__menu__icon {
         display: none;
         visibility: hidden;
+        z-index: 20;
     }
 
     // Tablet
@@ -155,5 +225,4 @@
             width: 200px;
         }
     }
-
 }
