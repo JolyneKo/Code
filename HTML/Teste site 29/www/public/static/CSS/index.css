@@ -174,9 +174,6 @@
   }
 }
 @media (max-width: 488px) {
-  .header {
-    justify-content: center;
-  }
   .header__nav {
     display: none;
     visibility: none;
@@ -186,7 +183,15 @@
     visibility: none;
   }
   .header__logo {
-    width: 200px;
+    width: 50vw;
+  }
+  .header__menu__icon {
+    display: block;
+    visibility: visible;
+    color: #ff7213;
+    font-size: 3rem;
+    position: absolute;
+    right: 50px;
   }
 }
 
@@ -208,7 +213,8 @@
   margin: 0 30px;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
   height: 100%;
 }
@@ -216,6 +222,7 @@ html, body {
 .main {
   height: auto;
   overflow: hidden;
+  background-color: white;
 }
 
 .main__home {
@@ -287,7 +294,7 @@ html, body {
 
 .main__doe {
   background-color: black;
-  padding: 50px;
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,16 +310,23 @@ html, body {
   font-family: "Aktiv Grotesk", sans-serif;
   font-size: 1.5rem;
   margin: 20px 0;
-  width: 800px;
+  max-width: 700px;
+  line-height: 1.7;
   text-align: center;
 }
 .main__doe__button {
-  margin: 30px 0;
-}
-.main__doe__button #doar_imagem {
-  height: auto;
-  box-shadow: #26394d 0px 0px 20px -10px;
+  background-color: #ff7213;
+  color: black;
+  border: none;
+  padding: 18px 38px;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  font-family: "Aktiv Grotesk", sans-serif;
   opacity: 0;
+}
+.main__doe__button:hover {
+  background-color: orangered;
+  color: black;
 }
 
 .main__infos {
@@ -320,6 +334,7 @@ html, body {
   padding: 50px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .main__infos__parceiros {
   display: flex;
@@ -330,6 +345,7 @@ html, body {
   color: black;
   font-family: "Nunito Sans", sans-serif;
   font-size: 2.5rem;
+  margin: 20px 0;
 }
 .main__infos__parceiros__imagens .imagem {
   margin: 30px 50px;
@@ -338,6 +354,8 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin-top: 30px;
 }
 .main__infos__projetos__header {
   color: black;
@@ -468,9 +486,11 @@ html, body {
   z-index: 5;
   position: absolute;
   width: 100%;
+  display: none;
   visibility: hidden;
   z-index: 15;
   visibility: hidden;
+  display: none;
 }
 .menu__links__link {
   border-top: 1px solid #ddd;
@@ -492,6 +512,20 @@ html, body {
   font-size: 1rem;
   margin: 0 10px;
 }
+.menu__links .category--items {
+  visibility: hidden;
+  display: none;
+}
+.menu__links .category--items a {
+  margin-left: 30px;
+}
+.menu__links .sub--category {
+  visibility: hidden;
+  display: none;
+}
+.menu__links .sub--category a {
+  margin-left: 60px;
+}
 
 .mobile__wrapper {
   background-color: black;
@@ -505,13 +539,35 @@ html, body {
   transition: opacity 0.5s;
 }
 
-.menu--open {
-  visibility: visible;
-  box-shadow: none;
+@media (max-width: 1252px) and (min-width: 488px) {
+  .menu--open {
+    visibility: visible;
+    display: block;
+  }
+}
+@media (max-width: 488px) {
+  .menu--open {
+    visibility: visible;
+    display: block;
+  }
 }
 
 .mobile__wrapper.menu--open {
   opacity: 80%;
+}
+
+.menu--open--header {
+  box-shadow: none;
+}
+
+.category--open {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.sub--category--open {
+  display: block !important;
+  visibility: visible !important;
 }
 
 /*# sourceMappingURL=index.css.map */

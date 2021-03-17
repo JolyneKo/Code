@@ -1,33 +1,38 @@
-let isOpen = false;
+const wrapper = document.querySelector('.mobile__wrapper');
+const header = document.querySelector('.header');
+const icon = document.querySelector('.header__menu__icon');
+const menu = document.querySelector('.menu');
+const category1 = document.querySelector('.category--1');
+const category2 = document.querySelector('.category--2');
+const category3 = document.querySelector('.category--3');
+const subcategory1 = document.querySelector('.subcategory--1');
 
-$('.header__menu__icon').click(() => {
-    $('.menu').toggleClass('menu--open');
-    $('.mobile__wrapper').toggleClass('menu--open');
-    $('.header').toggleClass('menu--open');
+// Abrir/fechar menu quando clicar no botão de abrir menu
+icon.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+    wrapper.classList.toggle('menu--open');
+    header.classList.toggle('menu--open--header');
 });
 
-$('.menu__links__link').click(function () {
-    if (!isOpen) {
-        let conteúdo = $(this).data('categorias').match(/([a-zA-Z\-\_\só]+)/g)
-        
-        console.log(conteúdo);
-        const links = $(this).data('links').split(' ');
+// Quando apertar na primeira categoria do menu
+category1.addEventListener('click', () => {
+    const items = document.querySelector('.category__items--1');
+    items.classList.toggle('category--open');
+});
 
-        links.forEach((link, index) => {
-            const item = conteúdo[index];
+// Quando apertar na segunda categoria do menu
+category2.addEventListener('click', () => {
+    const items = document.querySelector('.category__items--2');
+    items.classList.toggle('category--open');
+});
 
-            const elementos = `
-                <li class="menu__links__link category--item" style="margin-left: 20px;">
-                    <a href="${link}">${item}</a>
-                </li>
-            `;
+// Quando apertar na terceira categoria do menu
+category3.addEventListener('click', () => {
+    const items = document.querySelector('.category__items--3');
+    items.classList.toggle('category--open');
+});
 
-            $(elementos).insertAfter(this);
-        });
-
-        isOpen = !isOpen;
-    } else {
-        $('.category--item').remove();
-        isOpen = !isOpen;
-    }
+subcategory1.addEventListener('click', () => {
+    const items = document.querySelector('.sub--category--items--1');
+    items.classList.toggle('sub--category--open');
 });

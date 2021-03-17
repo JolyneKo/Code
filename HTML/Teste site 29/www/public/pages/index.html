@@ -14,7 +14,6 @@
       src="https://kit.fontawesome.com/973f56b433.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="JS/index.js"></script>
     <script defer src="JS/menu.js"></script>
 
@@ -41,11 +40,14 @@
     <header class="header">
       <!-- LOGO -->
       <a href="/">
-        <img
-          src="Images/logo.png"
-          alt="Logo Instituto Ajuricaba"
-          class="header__logo"
-        />
+        <picture>
+          <source media="(max-width: 488px)" srcset="Images/logo_mobile.png" />
+          <img
+            src="Images/logo.png"
+            alt="Logo Instituto Ajuricaba"
+            class="header__logo"
+          />
+        </picture>
       </a>
 
       <!-- Texto Header -->
@@ -158,27 +160,87 @@
     <nav class="menu">
       <div class="menu__content">
         <ul class="menu__links">
-          <li class="menu__links__link menu__links__link--active"><a href="/">Home</a></li>
-          <li class="menu__links__link menu__links__link--category" data-categorias="'Sobre''Diretoria''Ex-presidentes'" data-links="/about /diretoria /ex-presidentes">
+          <!-- Home -->
+          <li class="menu__links__link menu__links__link--active">
+            <a href="/">Home</a>
+          </li>
+
+          <!-- Categoria Institucional -->
+          <li class="menu__links__link menu__links__link--category category--1">
             <a>Institucional</a>
             <i class="fas fa-caret-down icon"></i>
-            <div classdropdown"></div>
           </li>
+
+          <div class="category--items category__items--1">
+            <li class="menu__links__link"><a href="/about">Sobre</a></li>
+            <li class="menu__links__link">
+              <a href="/diretoria">Diretoria</a>
+            </li>
+            <li class="menu__links__link">
+              <a href="/ex-presidentes">Ex-presidentes</a>
+            </li>
+          </div>
+
+          <!-- Notícias -->
           <li class="menu__links__link"><a href="/noticias">Notícias</a></li>
+
+          <!-- Textos -->
           <li class="menu__links__link"><a href="/textos">Textos</a></li>
-          <li class="menu__links__link menu__links__link--category" data-categorias="'Ajuricast''Ajuricaba TV'" data-links="/ajuricast /ajuricaba-tv">
+
+          <!-- Categoria Multimídia -->
+          <li class="menu__links__link menu__links__link--category category--2">
             <a>Multimídia</a>
             <i class="fas fa-caret-down icon"></i>
-            <div class="menu__dropdown"></div>
           </li>
-          <li class="menu__links__link header__menu__links__link--category" data-categorias="'Eventos Anteriores''Próximos Eventos'" data-links="/eventos-anteriores /proximos-eventos">
+
+          <div class="category--items category__items--2">
+            <li class="menu__links__link">
+              <a href="/ajuricast">Ajuricast</a>
+            </li>
+            <li
+              class="menu__links__link menu__links__link--category subcategory--1"
+            >
+              <a>Ajuricaba TV</a>
+              <i class="fas fa-caret-down icon"></i>
+            </li>
+
+            <div class="sub--category sub--category--items--1">
+              <li class="menu__links__link">
+                <a href="/ajuricaba-tv">Academia Ajuricaba</a>
+              </li>
+              <li class="menu__links__link">
+                <a href="/paletras">Palestras</a>
+              </li>
+              <li class="menu__links__link">
+                <a href="/minuto-ajuricaba">Minuto Ajuricaba</a>
+              </li>
+              <li class="menu__links__link">
+                <a href="/entrevistas">Entrevistas</a>
+              </li>
+              <li class="menu__links__link"><a href="/actions">Ações</a></li>
+            </div>
+          </div>
+
+          <!-- Categoria Eventos -->
+          <li
+            class="menu__links__link header__menu__links__link--category category--3"
+          >
             <a>Eventos</a>
             <i class="fas fa-caret-down icon"></i>
-            <div class="menu__dropdown"></div>
           </li>
+
+          <div class="category--items category__items--3">
+            <li class="menu__links__link">
+              <a href="/eventos-anteriores">Eventos Anteriores</a>
+            </li>
+            <li class="menu__links__link">
+              <a href="/proximos-eventos">Próximos Eventos</a>
+            </li>
+          </div>
         </ul>
       </div>
     </nav>
+
     <div class="mobile__wrapper"></div>
     <!-- END MENU -->
 
@@ -212,10 +274,11 @@
       <div class="main__doe">
         <h2 class="main__doe__header">Doe para o Instituto Ajuricaba</h2>
         <p class="main__doe__text">
-          Contribua para que a Liberdade vença! Nossas atividades são
-          voluntárias e todas as ações são custeadas por doações.
+          Contribua para que a Liberdade vença!<br />
+          Nossas atividades são voluntárias e todas as ações são custeadas por
+          doações.
         </p>
-        <div class="main__doe__button">
+        <div>
           <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
           <form
             action="https://pagseguro.uol.com.br/checkout/v2/donation.html"
@@ -229,11 +292,12 @@
             />
             <input type="hidden" name="iot" value="button" />
             <input
-              type="image"
-              src="Images/doar-pag-seguro.png"
+              type="submit"
               name="submit"
               alt="Pague com PagSeguro - é rápido, grátis e seguro!"
-              id="doar_imagem"
+              value="Doar com pagseguro"
+              class="main__doe__button"
+              id="aaa"
             />
           </form>
           <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
