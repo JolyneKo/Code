@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}" />
+
+    <!-- Scripts externos -->
+    <script
+      src="https://kit.fontawesome.com/973f56b433.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    {% include 'header.html' %}
+
+    <!-- Main -->
+    <main class="main">
+      <article class="main__posts">
+        <h1 class="main__posts__header">Home page</h1>
+        <div class="container">
+          {% for post in posts %}
+          <section class="main__posts__post">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
+
+            <div class="main__posts__post__content">
+              <h2>{{ post.title }}</h2>
+              <p>{{ post.summary }}</p>
+              <div class="data">{{ post.date }}</div>
+            </div>
+          </section>
+          {% endfor %}
+        </div>
+      </article>
+      <aside class="main__relacionados">
+        {% for post in random_posts %}
+        <section class="main__relacionados__container">
+          <h2>{{ post.title }}</h2>
+          <img src="{{ post.image }}" alt="Post relacionado" />
+        </section>
+        {% endfor %}
+      </aside>
+    </main>
+
+    {% include 'footer.html' %}
+  </body>
+</html>

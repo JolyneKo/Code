@@ -15,3 +15,39 @@
     @content;
   }
 }
+
+@mixin footer__tablet {
+  @media (max-width: 1061px) and (min-width: 787px) {
+    @content;
+  }
+}
+
+@mixin footer__mobile {
+  @media (max-width: 787px) {
+    @content;
+  }
+}
+
+@mixin index__tela__pequena {
+  @media (max-width: 1590px) and (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin index__tablet {
+  @media (max-width: 1300px) and (min-width: 1030px) {
+    @content;
+  }
+}
+
+@mixin index__tablet--mini {
+  @media (max-width: 1030px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin index__mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 50px;
+}
+
+.slider {
+  width: 900px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  background: orangered;
+  display: flex;
+  align-items: center;
+  transform: translate3d(0, 0, 0);
+}
+
+.slider figure {
+  float: left;
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  transition: 1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  float: left;
+  animation: slider 1s forwards;
+  object-fit: cover;
+}
+
+.slider button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 500%;
+  border: none;
+  padding: 10px;
+  font-size: 1.3rem;
+  position: absolute;
+}
+
+.slider button:first-child {
+  left: 15px;
+  z-index: 15;
+}
+
+.slider button:last-child {
+  right: 15px;
+}
+
+.slider i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide 2 */
+
+.slider2 {
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  background: orangered;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+}
+
+.slide2::before,
+.slide2::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slide2::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slide2::before {
+  left: 0;
+  top: 0;
+}
+
+.slider2 figure {
+  float: left;
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  transition: 1s;
+  animation: 40s scroll linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate3d(0, 0, 0);
+    transform: translateX(-500%);
+  }
+}
+
+.slider2 img {
+  width: 100%;
+  height: auto;
+  float: left;
+  animation: slider 1s forwards;
+  object-fit: cover;
+}
+
+.slider2 button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 500%;
+  border: none;
+  padding: 10px;
+  font-size: 1.3rem;
+  position: absolute;
+  display: none;
+}
+
+.slider2 button:first-child {
+  left: 15px;
+  z-index: 15;
+}
+
+.slider2 button:last-child {
+  right: 15px;
+}
+
+.slider2 i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

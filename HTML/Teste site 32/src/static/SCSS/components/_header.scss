@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+// Variáveis
+$bg-color: white;
+$font-color: black;
+$font: "Inter", sans-serif;
+$height: 100px;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Header
+.header {
+  background-color: $bg-color;
+  height: $height;
+  display: flex;
+  align-items: center;
+  border-bottom: #c61d25 solid 5px;
+
+  &__logo {
+    margin: 0 100px;
+  }
+
+  &__links {
+    position: absolute;
+    right: 100px;
+
+    &__link {
+      color: $font-color;
+      font-family: $font;
+      text-decoration: none;
+      padding: 30px;
+      font-size: 1.3rem;
+
+      &:hover {
+        background-color: darken($bg-color, 5%);
+      }
+    }
+  }
+}
