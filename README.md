@@ -9,7 +9,8 @@ Boa sorte pra mim mesmo
 - HTML
 - CSS
 - Javascript
-
+- Python
+- 
 # Línguagens que faltam aprender
 
 - Ruby

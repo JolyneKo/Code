@@ -1,0 +1,41 @@
+@use '../Abstracts/' as *;
+
+// Footer
+.footer {
+  background-color: $footer-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+
+  &__icons {
+    display: flex;
+    position: absolute;
+    right: 50px;
+
+    .icon {
+      color: white;
+      font-size: 2.5rem;
+      margin: 0 30px;
+    }
+  }
+
+  // Tablet
+  @include footer__tablet {
+    &__icons {
+      .icon {
+        margin: 0 15px;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // Mobile
+  @include footer__mobile {
+    &__icons {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}

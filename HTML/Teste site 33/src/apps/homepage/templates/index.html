@@ -1,0 +1,233 @@
+{% load static %}
+
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/homepage.css' %}" />
+
+    <!-- Scripts externos -->
+    <script
+      src="https://kit.fontawesome.com/973f56b433.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascripts -->
+    <script defer src="{% static 'JS/index.js' %}"></script>
+    <script defer src="{% static 'JS/menu.js' %}"></script>
+
+    <!-- Icons -->
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="/Imagens/icons/favicon-180x180.png" />
+
+    <!-- Título -->
+    <title>
+      Instituto Ajuricaba - O Maior Instituto Pró-Liberdade da Região Norte
+    </title>
+  </head>
+  <body>
+    {% include "header.html" %} {% include "menu-mobile.html" %}
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- Bloco 1 - principal -->
+      <div class="main__home">
+        <section class="main__home__campanhas">
+          <h2>Campanhas</h2>
+          <div class="main__home__campanhas__filter">
+            <div class="main__home__campanhas__filter__imagem"></div>
+          </div>
+        </section>
+
+        <section class="main__home__texto">
+          <h1 class="main__home__texto__header">
+            Mais Liberdade para o indivíduo
+          </h1>
+
+          <p class="main__home__texto__description">
+            Somos a favor do Livre Mercado e da Livre Iniciativa, onde o estado
+            não devia atrapalhar o cidadão com tanta burocracia e impostos.
+            <br />
+            Seja um Membro do Instituto Ajuricaba!
+          </p>
+
+          <a href="https://bit.ly/EntreNoAjuricaba">
+            <button id="inscreva">Inscreva-se</button>
+          </a>
+        </section>
+      </div>
+
+      <!-- Bloco 2 - Doação -->
+      <div class="main__doe">
+        <h2 class="main__doe__header">Doe para o Instituto Ajuricaba</h2>
+        <p class="main__doe__text">
+          Contribua para que a Liberdade vença!<br />
+          Nossas atividades são voluntárias e todas as ações são custeadas por
+          doações.
+        </p>
+        <div>
+          <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+          <form
+            action="https://pagseguro.uol.com.br/checkout/v2/donation.html"
+            method="post"
+          >
+            <input type="hidden" name="currency" value="BRL" />
+            <input
+              type="hidden"
+              name="receiverEmail"
+              value="clubeajuricaba@gmail.com"
+            />
+            <input type="hidden" name="iot" value="button" />
+            <input
+              type="submit"
+              name="submit"
+              alt="Pague com PagSeguro - é rápido, grátis e seguro!"
+              value="Doar com pagseguro"
+              class="main__doe__button"
+              id="aaa"
+            />
+          </form>
+          <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+        </div>
+      </div>
+
+      <!-- Bloco 3 - Sobre Ajuricaba -->
+      <div class="main__infos">
+        <div class="main__infos__parceiros">
+          <h2 class="main__infos__parceiros__header">Nossos Parceiros</h2>
+          <div class="main__infos__parceiros__imagens">
+            <img
+              src="/Imagens/parceiro-1.png"
+              alt="Students For Liberty Brasil"
+              class="imagem"
+            />
+            <img
+              src="/Imagens/parceiro-2.png"
+              alt="CDL Manaus"
+              class="imagem"
+            />
+            <img
+              src="/Imagens/parceiro-3.png"
+              alt="Rede Liberdade"
+              class="imagem"
+            />
+          </div>
+        </div>
+
+        <div class="main__infos__projetos">
+          <h2 class="main__infos__projetos__header">Nossos Projetos</h2>
+
+          <div class="main__infos__projetos__containers">
+            <section class="main__infos__projetos__containers__container">
+              <hr />
+              <h2 class="main__infos__projetos__containers__container__header">
+                Ajuricast
+              </h2>
+              <p
+                class="main__infos__projetos__containers__container__text"
+                id="ajuricast-text"
+              >
+                Estamos nas principais plataformas de streaming de podcasts,
+                confira:
+              </p>
+              <a href="https://linktr.ee/InstitutoAjuricaba">
+                <button
+                  class="main__infos__projetos__containers__container__button"
+                >
+                  Ouça Agora
+                </button>
+              </a>
+            </section>
+
+            <section class="main__infos__projetos__containers__container">
+              <hr />
+              <h2 class="main__infos__projetos__containers__container__header">
+                Eventos
+              </h2>
+              <p class="main__infos__projetos__containers__container__text">
+                Galeria de fotos dos últimos eventos e ativismo realizados.
+                Confira nossas fotos:
+              </p>
+              <a href="/eventos-anteriores/">
+                <button
+                  class="main__infos__projetos__containers__container__button"
+                >
+                  Veja mais
+                </button>
+              </a>
+            </section>
+
+            <section class="main__infos__projetos__containers__container">
+              <hr />
+              <h2 class="main__infos__projetos__containers__container__header">
+                Textos
+              </h2>
+              <p class="main__infos__projetos__containers__container__text">
+                Temos uma biblioteca de textos sobre os temas Economia,
+                Liberalismo, Negócios e mais.
+              </p>
+              <a href="/eventos-anteriores/">
+                <button
+                  class="main__infos__projetos__containers__container__button"
+                >
+                  Leia mais
+                </button>
+              </a>
+            </section>
+          </div>
+        </div>
+
+        <!-- Bloco 4 - Extras -->
+        <div class="main__infos__extras">
+          <section class="main__infos__extras__container">
+            <i class="fas fa-pen icon" id="pen"></i>
+            <h2 class="main__infos__extras__container__header">
+              Escreva para o Ajuricaba!
+            </h2>
+            <p class="main__infos__extras__container__text">
+              Produza textos em nossa plataforma e ganhe visibilidade no maior
+              grupo do Norte!
+            </p>
+            <a href="/submissao-de-textos-para-o-site/">
+              <button class="main__infos__extras__container__button">
+                Submeta aqui
+              </button>
+            </a>
+          </section>
+
+          <section class="main__infos__extras__container empty-space"></section>
+
+          <section class="main__infos__extras__container">
+            <i class="fab fa-youtube icon" id="youtube"></i>
+            <h2 class="main__infos__extras__container__header">
+              Nossos Vídeos
+            </h2>
+            <p class="main__infos__extras__container__text">
+              Temos Canal no YouTube com conteúdo diverso como Palestras, Minuto
+              Ajuricaba, Transmissões ao vivo e discussões de temas específicos.
+            </p>
+            <a href="https://www.youtube.com/channel/UCqfHhxZ3ZE1wzhTNQ3_njXw">
+              <button class="main__infos__extras__container__button">
+                Assista Agora
+              </button>
+            </a>
+          </section>
+        </div>
+      </div>
+    </main>
+    {% include "footer.html" %}
+  </body>
+</html>
